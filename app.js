@@ -6,7 +6,7 @@ const bodyParser = require('body-parser')
 const app = express()
 const port = 3000
 
-// require('./config/mongoose')
+require('./config/mongoose')
 
 app.engine('hbs', exphbs.engine({ defaultLayout: 'main', extname: '.hbs' }))
 app.set('view engine', 'hbs')
