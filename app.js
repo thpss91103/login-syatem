@@ -1,7 +1,7 @@
 const express = require('express')
 const exphbs = require('express-handlebars')
 const bodyParser = require('body-parser')
-// const routes = require('./routes')
+const routes = require('./routes')
 
 const app = express()
 const port = 3000
@@ -13,11 +13,7 @@ app.set('view engine', 'hbs')
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: true }))
 
-// app.use(routes)
-
-app.get('/', (req, res) => {
-  res.send('Hello')
-})
+app.use(routes)
 
 app.listen(port, () => {
   console.log(`Express is listening on http://localhost:${port}`)
